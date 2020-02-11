@@ -11,8 +11,10 @@
 #flyer {
   outline: solid 2px black;
   display: block;
+  width: 80%;
   max-width: 1200px;
   margin: 0 auto;
+  object-fit: scale-down;
 }
 
 #info-box {
