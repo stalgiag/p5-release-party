@@ -10,10 +10,7 @@
 /* CUSTOM */
 #flyer {
   outline: solid 2px black;
-  display: block;
-  width: 80%;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 100%;
   object-fit: scale-down;
 }
 
@@ -23,10 +20,43 @@
   padding: 10px;
   position:absolute;
   width:30%;
-  height: 60%;
+  height: 20%;
   background-color:white;
   outline: solid 2px black;
   overflow-y: scroll;
+}
+
+#info-tile-container-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow-x: visible;
+}
+
+#info-tile-container-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow-x: visible;
+}
+
+.info-tile {
+  /* position:absolute; */
+  /* left: 0; */
+  overflow-x: visible;
+  /* height: 100%; */
+  /* object-fit: scale-down; */
+}
+
+#main-container {
+  /* display: block; */
+  overflow-y: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 15%;
+  padding-right: 15%;
+  margin: 0 auto;
 }
 
 a {
@@ -41,8 +71,6 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
-  background-image: url("../img/info-tile-small.jpg");
-  background-repeat: repeat-y;
 }
 
 /*
