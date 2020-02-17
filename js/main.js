@@ -1,17 +1,32 @@
-var box = document.getElementById("info-box");
-var flyer = document.getElementById("flyer");
-var mouseIsOver = true;
+const box = document.getElementById("info-box");
+const flyer = document.getElementById("flyer");
+let mouseIsOver = true, isMobile = false;
+let mX, mY;
 
-    flyer.onmouseenter = function()   {
-        mouseIsOver = true;
-        box.style.visibility = "hidden"
-     };
-     flyer.onmouseout = function()   {
-        mouseIsOver = false;
-        box.style.visibility = "visible"
-     }
+window.onload = () => {
+   if (typeof window.orientation !== 'undefined') {
+      isMobile = true;
+      box.style.visibility = "visible"
+      return;
+   }
+}
 
-window.addEventListener('mousemove', function(e){
-        box.style.left = e.pageX + "px";
-        box.style.top = e.pageY + "px";
+flyer.onmouseenter = function () {
+   if (isMobile) { return; }
+   mouseIsOver = true;
+   box.style.visibility = "hidden"
+};
+
+flyer.onmouseout = function () {
+   if (isMobile) { return; }
+   mouseIsOver = false;
+   box.style.visibility = "visible"
+   box.style.left = mX;
+   box.style.top = mY;
+}
+
+window.addEventListener('mousemove', function (e) {
+   if(isMobile){return;}
+   mX = e.pageX - 100 + 'px';
+   mY = e.pageY + 'px';
 });

@@ -22,10 +22,15 @@
   text-align: justify;
   padding: 10px;
   position:absolute;
-  width:300px;
-  height: 300px;
+  width:30%;
+  height: 60%;
   background-color:white;
   outline: solid 2px black;
+  overflow-y: scroll;
+}
+
+a {
+  color: magenta;
 }
 
 /* ==========================================================================
@@ -212,6 +217,36 @@ textarea {
 
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    background-image: none;
+  }
+
+  #flyer {
+    outline: solid 2px black;
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    object-fit: scale-down;
+  }
+
+  #info-box {
+    font-family: Arial;
+    text-align: justify;
+    padding: 10px;
+    position:absolute;
+    font-size: 0.8em;
+    left: 15%;
+    top: 5%;
+    width:70%;
+    height: 70%;
+    background-color:rgba(255, 255, 255, 0.9);
+    outline: solid 2px black;
+    overflow-y: scroll;
+  }
 }
 
 @media print,
