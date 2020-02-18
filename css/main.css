@@ -256,24 +256,29 @@ textarea {
     outline: solid 2px black;
     display: block;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    object-fit: scale-down;
   }
 
   #info-box {
-    font-family: Arial;
-    text-align: justify;
     padding: 10px;
     position:absolute;
     font-size: 0.8em;
     left: 15%;
     top: 5%;
     width:70%;
-    height: 70%;
+    height: 90%;
     background-color:rgba(255, 255, 255, 0.9);
     outline: solid 2px black;
     overflow-y: scroll;
+  }
+
+  #main-container {
+    /* display: block; */
+    /* overflow-y: hidden; */
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin-top: 10%;
+    margin: 0 auto;
   }
 }
 
